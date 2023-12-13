@@ -31,13 +31,47 @@ const user={
 
 //console.log(user)
 
-user.sex= "male"
-//console.log(user)
+// user.sex= "male"
+// //console.log(user)
 
-user.greeting = function(){
-    console.log("Hello js user")
-    return 3
+// user.greeting = function(){
+//     console.log("Hello js user")
+//     return 3
+// }
+
+// user.greeting()
+// console.log(user.greeting())
+
+const reguser={
+    email:"google@gmail.com",
+    name:{
+        first:"kushagra",
+        last:"jain"
+    }
 }
+//console.log(reguser.name.last)
+const obj={user,reguser}
+//console.log(obj)
 
-user.greeting()
-console.log(user.greeting())
+const obj2=Object.assign({},user,reguser)
+const obj3={...user,...reguser}
+// console.log(obj3)
+// console.log(Object.keys(obj2))
+// console.log(Object.values(obj2))
+
+
+//++++++++++++destructuring++++++++++++
+const {location:place}=obj3
+//console.log(place)
+
+const navbar=({company}) =>{
+    console.log("about us")
+}
+//navbar(company="hitest")
+
+//+++++++++++ API concept ++++++++++++
+//we get data in the format of json which is nothing but object only 
+// {
+//     "name" : "kushagra",
+//     "age" : 22
+// }
